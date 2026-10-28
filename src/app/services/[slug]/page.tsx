@@ -146,7 +146,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
           <div className="lg:col-span-4">
             <p className="t-eyebrow !text-on-dark-muted mb-5">Приёмка</p>
             <h2 id="check-title" className="t-h2">
-              Что проверить <span className="text-accent">самому</span>
+              Что проверить самому
             </h2>
           </div>
           <Reveal as="ul" className="flex flex-col gap-px bg-on-dark/15 lg:col-span-7 lg:col-start-6">

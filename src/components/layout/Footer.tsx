@@ -90,7 +90,7 @@ export function Footer() {
                 {Array.from(line).map((ch, j) => (
                   <span key={j}>{ch}</span>
                 ))}
-                {i === 1 && <span className="text-accent">.</span>}
+                {i === 1 && <span>.</span>}
               </p>
             ))}
           </div>

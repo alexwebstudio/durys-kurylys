@@ -68,7 +68,7 @@ export function MobileMenu({ id, open, onClose }: Props) {
                   aria-current={active ? "page" : undefined}
                   className="flex items-baseline justify-between py-3"
                 >
-                  <span className={cn("font-display text-[36px] font-[800] uppercase leading-[1.1] tracking-[-0.02em]", active && "text-accent")}>{item.label}</span>
+                  <span className={cn("font-display text-[36px] font-[800] uppercase leading-[1.1] tracking-[-0.02em]", active && "underline decoration-1 underline-offset-[10px]")}>{item.label}</span>
                   <span className="t-mono text-[12px] text-ink-muted">{String(i + 1).padStart(2, "0")}</span>
                 </Link>
               </li>

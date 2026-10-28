@@ -104,11 +104,11 @@
   }
 
   ::selection {
-    background: var(--color-accent);
-    color: var(--color-on-accent);
+    background: var(--color-graphite);
+    color: var(--color-on-dark);
   }
 
-  /* Нативная полоса скрыта: вместо неё — свой скроллбар акцентного цвета (CustomScrollbar),
+  /* Нативная полоса скрыта: вместо неё — свой скроллбар (CustomScrollbar),
      одинаковый на десктопе и телефоне */
   html {
     scrollbar-width: none;
@@ -117,9 +117,9 @@
     display: none;
   }
 
-  /* Внутренние прокручиваемые области (модалка, меню) — тонкая акцентная полоса */
+  /* Внутренние прокручиваемые области (модалка, меню) — тонкая графитовая полоса */
   * {
-    scrollbar-color: var(--color-accent) transparent;
+    scrollbar-color: var(--color-graphite) transparent;
     scrollbar-width: thin;
   }
 
@@ -472,7 +472,7 @@ html.is-loading {
   animation-play-state: paused;
 }
 
-/* ───────── Свой скроллбар (акцентный) ───────── */
+/* ───────── Свой скроллбар ───────── */
 
 .cscroll {
   position: fixed;
@@ -493,7 +493,7 @@ html.is-loading {
   top: 0;
   width: 4px;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-graphite);
   will-change: transform;
   transition: width 0.25s ease;
   touch-action: none;

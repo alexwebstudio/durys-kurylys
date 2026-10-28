@@ -23,7 +23,9 @@ const sizes = { h1: "t-h1", h2: "t-h2", hero: "t-hero" };
 /**
  * Двойной рендер заголовка: цельный sr-only `<h1>/<h2>` для SEO и скринридеров
  * + визуальная копия, разбитая на слова для word-by-word reveal.
- * `*слово*` в строке — акцент терракотой.
+ * `*слово*` в строке помечает смысловой акцент, но визуально сейчас ничем
+ * не выделяется: цветное слово посреди заголовка выглядит дёшево. Разметку
+ * оставили на случай, если акцент вернут другим способом (вес, подчёркивание).
  */
 export function Heading({ lines, level = "h2", size, cascade, id, className, delay = 0, instant }: Props) {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,7 +66,7 @@ export function Heading({ lines, level = "h2", size, cascade, id, className, del
               <Fragment key={j}>
                 <span className="word">
                   <span
-                    className={cn("word-inner", w.accent && "text-accent", instant && "anim-word")}
+                    className={cn("word-inner", instant && "anim-word")}
                     style={instant ? ({ "--d": `${delay + n++ * 0.04}s` } as CSSProperties) : undefined}
                   >
                     {w.text}

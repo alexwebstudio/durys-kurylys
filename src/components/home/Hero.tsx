@@ -136,25 +136,29 @@ export function Hero() {
             ))}
           </ul>
 
+          {/* Плавающая карточка: приподнята над вордмарком, ссылки вынесены в отдельную
+              строку под разделителем — иначе они слипались с текстом и друг с другом */}
           <div
             className={cn(
-              "anim-in absolute bottom-[calc(100%-1.5rem)] right-0 hidden w-full max-w-[360px] rounded-[22px] bg-surface p-7 text-ink xl:block",
+              "anim-in card absolute bottom-[calc(100%+0.75rem)] right-0 hidden w-full max-w-[400px] bg-surface p-8 text-ink xl:block",
             )}
             style={inAt(7)}
           >
-            <p className="text-[22px] font-medium leading-tight">{hero.card.title}</p>
-            <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">{hero.card.text}</p>
-            <button
-              type="button"
-              onClick={() => open("Карточка в герое")}
-              aria-haspopup="dialog"
-              className="link-underline mt-6 pb-1 text-[15px] font-medium"
-            >
-              {hero.card.link}
-            </button>
-            <Link href="/services" className="link-underline ml-6 pb-1 text-[15px] text-ink-muted">
-              {hero.secondary}
-            </Link>
+            <p className="text-pretty text-[21px] font-semibold leading-snug">{hero.card.title}</p>
+            <p className="mt-3.5 text-pretty text-[15px] leading-relaxed text-ink-muted">{hero.card.text}</p>
+            <div className="mt-7 flex items-center justify-between gap-5 border-t border-line pt-5">
+              <button
+                type="button"
+                onClick={() => open("Карточка в герое")}
+                aria-haspopup="dialog"
+                className="link-underline pb-0.5 text-[15px] font-medium"
+              >
+                {hero.card.link}
+              </button>
+              <Link href="/services" className="link-underline pb-0.5 text-[15px] text-ink-muted">
+                {hero.secondary}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

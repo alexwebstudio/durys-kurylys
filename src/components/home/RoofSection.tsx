@@ -196,7 +196,7 @@ export function RoofSection() {
                       )}
                     >
                       <Mono className="!text-[12px] text-ink-muted">{String(i + 1).padStart(2, "0")}</Mono>
-                      <span className={cn("text-[16px] font-medium leading-tight transition-colors duration-300 xl:text-[17px]", active ? "text-accent" : "text-ink")}>
+                      <span className="text-[16px] font-medium leading-tight text-ink xl:text-[17px]">
                         {l.title}
                       </span>
                       <span className="col-start-2 truncate text-[13px] leading-snug text-ink-muted xl:text-[14px]">{l.role}</span>
