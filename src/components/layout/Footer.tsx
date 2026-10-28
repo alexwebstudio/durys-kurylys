@@ -75,7 +75,14 @@ export function Footer() {
             <Link href="/privacy" className="link-underline pb-0.5 md:justify-self-center">
               Политика конфиденциальности
             </Link>
-            <Mono className="md:justify-self-end">Разработано alexwebstudio ↗</Mono>
+            <a
+              href="https://alexwebstudio.ru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline pb-0.5 md:justify-self-end"
+            >
+              <Mono>Разработано alexwebstudio ↗</Mono>
+            </a>
           </div>
 
           {/* Подвал-вордмарк: две строки в разгонку по ширине, нижняя обрезана по базовой линии */}
