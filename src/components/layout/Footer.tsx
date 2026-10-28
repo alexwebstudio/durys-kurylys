@@ -67,7 +67,7 @@ export function Footer() {
             </address>
           </div>
 
-          {/* Нижняя строка: слева реквизиты, по центру политика, справа — прочерк вместо подписи студии */}
+          {/* Нижняя строка: слева реквизиты, по центру политика, справа — подпись студии */}
           <div className="mt-14 grid gap-4 border-t border-line py-6 text-[13px] text-ink-muted md:grid-cols-3 md:items-center">
             <p className="md:justify-self-start">
               © {new Date().getFullYear()} {site.legal.entity}
@@ -75,9 +75,7 @@ export function Footer() {
             <Link href="/privacy" className="link-underline pb-0.5 md:justify-self-center">
               Политика конфиденциальности
             </Link>
-            <Mono aria-hidden className="md:justify-self-end">
-              —
-            </Mono>
+            <Mono className="md:justify-self-end">Разработано alexwebstudio ↗</Mono>
           </div>
 
           {/* Подвал-вордмарк: две строки в разгонку по ширине, нижняя обрезана по базовой линии */}
